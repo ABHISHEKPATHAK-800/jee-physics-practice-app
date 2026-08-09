@@ -32,6 +32,7 @@ input{font-family:inherit;}
 
 .screen{display:none;min-height:100vh;}
 .screen.active{display:block;}
+#screen-dashboard.active{height:100vh;min-height:0;overflow-y:auto;overflow-x:hidden;}
 
 /* ---------- WELCOME ---------- */
 #screen-welcome.active{display:flex;align-items:center;justify-content:center;
