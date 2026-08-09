@@ -1,0 +1,194 @@
+[
+  {
+    "idx": 1,
+    "name": "Units, Dimensions, Errors & Vectors",
+    "total": 30,
+    "start": 3,
+    "end": 8,
+    "slug": "units-dimensions-errors-vectors"
+  },
+  {
+    "idx": 2,
+    "name": "Kinematics",
+    "total": 19,
+    "start": 9,
+    "end": 13,
+    "slug": "kinematics"
+  },
+  {
+    "idx": 3,
+    "name": "Laws of Motion",
+    "total": 18,
+    "start": 14,
+    "end": 19,
+    "slug": "laws-of-motion"
+  },
+  {
+    "idx": 4,
+    "name": "Work, Energy & Power",
+    "total": 12,
+    "start": 20,
+    "end": 23,
+    "slug": "work-energy-power"
+  },
+  {
+    "idx": 5,
+    "name": "COM & Collision",
+    "total": 6,
+    "start": 24,
+    "end": 27,
+    "slug": "com-collision"
+  },
+  {
+    "idx": 6,
+    "name": "Rotational Motion",
+    "total": 25,
+    "start": 28,
+    "end": 34,
+    "slug": "rotational-motion"
+  },
+  {
+    "idx": 7,
+    "name": "Gravitation",
+    "total": 10,
+    "start": 35,
+    "end": 38,
+    "slug": "gravitation"
+  },
+  {
+    "idx": 8,
+    "name": "Properties of Solids",
+    "total": 13,
+    "start": 39,
+    "end": 43,
+    "slug": "properties-of-solids"
+  },
+  {
+    "idx": 9,
+    "name": "Fluid Mechanics",
+    "total": 20,
+    "start": 44,
+    "end": 48,
+    "slug": "fluid-mechanics"
+  },
+  {
+    "idx": 10,
+    "name": "SHM",
+    "total": 15,
+    "start": 49,
+    "end": 52,
+    "slug": "shm"
+  },
+  {
+    "idx": 11,
+    "name": "Thermal Properties & Heat Transfer",
+    "total": 10,
+    "start": 53,
+    "end": 56,
+    "slug": "thermal-properties-heat-transfer"
+  },
+  {
+    "idx": 12,
+    "name": "Thermodynamics & KTG",
+    "total": 31,
+    "start": 57,
+    "end": 63,
+    "slug": "thermodynamics-ktg"
+  },
+  {
+    "idx": 13,
+    "name": "Wave Motion",
+    "total": 9,
+    "start": 64,
+    "end": 67,
+    "slug": "wave-motion"
+  },
+  {
+    "idx": 14,
+    "name": "Electrostatics",
+    "total": 25,
+    "start": 68,
+    "end": 73,
+    "slug": "electrostatics"
+  },
+  {
+    "idx": 15,
+    "name": "Capacitors",
+    "total": 15,
+    "start": 74,
+    "end": 77,
+    "slug": "capacitors"
+  },
+  {
+    "idx": 16,
+    "name": "Current Electricity",
+    "total": 29,
+    "start": 78,
+    "end": 84,
+    "slug": "current-electricity"
+  },
+  {
+    "idx": 17,
+    "name": "Moving Charges & MEC",
+    "total": 23,
+    "start": 85,
+    "end": 90,
+    "slug": "moving-charges-mec"
+  },
+  {
+    "idx": 18,
+    "name": "EMI",
+    "total": 19,
+    "start": 91,
+    "end": 95,
+    "slug": "emi"
+  },
+  {
+    "idx": 19,
+    "name": "AC",
+    "total": 10,
+    "start": 96,
+    "end": 99,
+    "slug": "ac"
+  },
+  {
+    "idx": 20,
+    "name": "Wave Optics",
+    "total": 21,
+    "start": 100,
+    "end": 105,
+    "slug": "wave-optics"
+  },
+  {
+    "idx": 21,
+    "name": "EM Waves",
+    "total": 19,
+    "start": 106,
+    "end": 110,
+    "slug": "em-waves"
+  },
+  {
+    "idx": 22,
+    "name": "Ray Optics",
+    "total": 37,
+    "start": 111,
+    "end": 117,
+    "slug": "ray-optics"
+  },
+  {
+    "idx": 23,
+    "name": "Semiconductors",
+    "total": 21,
+    "start": 118,
+    "end": 123,
+    "slug": "semiconductors"
+  },
+  {
+    "idx": 24,
+    "name": "Modern Physics",
+    "total": 39,
+    "start": 124,
+    "end": 131,
+    "slug": "modern-physics"
+  }
+]

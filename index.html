@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>JEE Main 2026 · Physics Practice</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ WELCOME SCREEN ============ -->
+<section id="screen-welcome" class="screen active">
+  <div class="welcome-wrap">
+    <div class="welcome-badge">JEE MAIN 2026</div>
+    <h1>Physics Previous Year Questions</h1>
+    <p class="welcome-sub">475 questions &middot; 24 chapters &middot; Jan &amp; April Attempt</p>
+
+    <div class="welcome-card">
+      <label for="name-input">What should we call you?</label>
+      <input id="name-input" type="text" maxlength="40" placeholder="Enter your name" autocomplete="off">
+      <button id="btn-start" class="btn btn-primary btn-block">Continue</button>
+      <p class="welcome-hint">Your name appears on the exam screen, just like the real NTA interface.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<section id="screen-dashboard" class="screen">
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="brand-dot"></span>
+      <span class="brand-name">JEE Main 2026 · Physics</span>
+    </div>
+    <div class="topbar-right">
+      <span id="dash-greeting" class="greeting"></span>
+      <button id="btn-settings" class="icon-btn" title="Settings">&#9881;</button>
+    </div>
+  </header>
+
+  <div class="dash-wrap">
+    <div class="dash-stats" id="dash-stats"></div>
+    <h2 class="dash-heading">Choose a chapter</h2>
+    <div id="chapter-grid" class="chapter-grid"></div>
+  </div>
+</section>
+
+<!-- ============ MODE SELECT MODAL ============ -->
+<div id="modal-mode" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" data-close="modal-mode">&times;</button>
+    <h3 id="mode-chapter-title">Chapter</h3>
+    <p class="modal-sub">Pick which question set and mode you want.</p>
+
+    <div class="field-row">
+      <label>Question set</label>
+      <div class="pill-group" id="attempt-pills">
+        <button class="pill active" data-attempt="both">Both (Jan + April)</button>
+        <button class="pill" data-attempt="jan">Jan Attempt</button>
+        <button class="pill" data-attempt="april">April Attempt</button>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <label>Mode</label>
+      <div class="mode-cards">
+        <button class="mode-card" id="pick-test">
+          <div class="mode-card-title">Test Mode</div>
+          <div class="mode-card-desc">Timed, exam-style. No feedback until you submit — just like the real NTA screen.</div>
+        </button>
+        <button class="mode-card" id="pick-quiz">
+          <div class="mode-card-title">Quiz Mode</div>
+          <div class="mode-card-desc">Same interface, instant right/wrong feedback with sound after every answer.</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ EXAM SCREEN ============ -->
+<section id="screen-exam" class="screen">
+  <header class="exam-header">
+    <div class="exam-header-left">
+      <div class="exam-brand">
+        <div class="exam-brand-title">JEE (MAIN) &middot; 2026</div>
+        <div class="exam-chapter-name" id="exam-chapter-name">Chapter</div>
+      </div>
+      <div class="exam-mode-badge" id="exam-mode-badge">TEST MODE</div>
+    </div>
+    <div class="exam-header-center">
+      <div class="timer-label">&#9200; Time Left</div>
+      <div class="timer" id="exam-timer">00:00:00</div>
+    </div>
+    <div class="exam-header-right">
+      <button class="icon-btn quiz-video-btn" id="btn-quiz-video" title="Watch chapter solution on YouTube" aria-label="Watch chapter solution on YouTube" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8Z" fill="currentColor"/><path d="m9.6 15.7 6.2-3.7-6.2-3.7v7.4Z" fill="#0b3d6e"/></svg></button>
+      <button class="icon-btn" id="btn-calc" title="Calculator">&#128425;</button>
+      <button class="icon-btn" id="btn-sound-toggle" title="Toggle sound">&#128266;</button>
+      <button class="icon-btn" id="btn-ask-ai" title="Ask AI about this question">&#129302;</button>
+      <button class="icon-btn" id="btn-exam-settings" title="Settings">&#9881;</button>
+    </div>
+  </header>
+
+  <div class="subject-tabs">
+    <span class="subject-tab active">PHYSICS</span>
+  </div>
+
+  <div class="exam-body">
+    <main class="exam-main">
+      <div class="qmeta-row">
+        <div class="qmeta-left">
+          <span id="q-index">Question 1</span>
+          <span class="qtype-badge" id="q-type-badge">Objective</span>
+          <span class="qtag-badge" id="q-dropped-badge" style="display:none">Dropped by NTA</span>
+        </div>
+        <div class="qmeta-right">
+          <button class="zoom-btn" id="zoom-out">&minus;</button>
+          <span id="zoom-level">100%</span>
+          <button class="zoom-btn" id="zoom-in">+</button>
+        </div>
+      </div>
+      <div class="marks-row">
+        <span class="marks-chip marks-plus">Correct: +4</span>
+        <span class="marks-chip marks-minus">Incorrect: &minus;1</span>
+        <span class="marks-chip">Question Type: MCQ</span>
+      </div>
+
+      <div class="question-viewport" id="question-viewport">
+        <img id="question-image" src="" alt="Question">
+      </div>
+
+      <div class="feedback-banner" id="feedback-banner"></div>
+
+      <div class="answer-panel">
+        <div class="answer-panel-heading">Answer</div>
+        <div class="answer-row" id="mcq-row">
+          <button class="opt-btn" data-opt="1"><span class="opt-radio"></span><span class="opt-text">Option 1</span></button>
+          <button class="opt-btn" data-opt="2"><span class="opt-radio"></span><span class="opt-text">Option 2</span></button>
+          <button class="opt-btn" data-opt="3"><span class="opt-radio"></span><span class="opt-text">Option 3</span></button>
+          <button class="opt-btn" data-opt="4"><span class="opt-radio"></span><span class="opt-text">Option 4</span></button>
+        </div>
+        <div class="answer-row numeric-row" id="numeric-row">
+          <label for="numeric-input">Numerical answer:</label>
+          <input type="number" step="any" id="numeric-input" placeholder="Enter value">
+        </div>
+        <div class="numeric-hint" id="numeric-hint">If this question has no numbered options in the image, type the numeric answer above instead.</div>
+      </div>
+
+      <div class="exam-nav-row">
+        <button class="btn btn-ghost" id="btn-clear">Clear Response</button>
+        <button class="btn btn-review" id="btn-mark-review">Mark for Review &amp; Next</button>
+        <button class="btn btn-ghost" id="btn-prev">&larr; Previous</button>
+        <button class="btn btn-primary" id="btn-save-next">Save &amp; Next</button>
+      </div>
+    </main>
+
+    <aside class="exam-sidebar">
+      <div class="candidate-card">
+        <div class="candidate-photo" id="candidate-avatar"></div>
+        <div class="candidate-info">
+          <div class="candidate-name" id="candidate-name"></div>
+          <div class="candidate-exam">JEE (Main) 2026 &middot; Physics</div>
+        </div>
+      </div>
+
+      <div class="status-counts" id="status-counts"></div>
+
+      <div class="sidebar-legend">
+        <div class="legend-item"><span class="dot dot-notvisited"></span> Not Visited</div>
+        <div class="legend-item"><span class="dot dot-notanswered"></span> Not Answered</div>
+        <div class="legend-item"><span class="dot dot-answered"></span> Answered</div>
+        <div class="legend-item"><span class="dot dot-review"></span> Marked for Review</div>
+        <div class="legend-item"><span class="dot dot-answered-review"></span> Answered &amp; Marked</div>
+      </div>
+      <div class="palette-wrap">
+        <div class="palette-heading">Question Palette</div>
+        <div id="question-palette" class="question-palette"></div>
+      </div>
+      <button class="btn btn-submit-test" id="btn-submit-test">Submit</button>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ RESULTS SCREEN ============ -->
+<section id="screen-results" class="screen">
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Results</span>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-ghost" id="btn-results-dashboard">Back to Dashboard</button>
+    </div>
+  </header>
+  <div class="results-wrap">
+    <h2 id="results-title">Chapter results</h2>
+    <div class="results-stats" id="results-stats"></div>
+    <div class="results-review-heading">Review answers</div>
+    <div id="results-review" class="results-review"></div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<div id="calc-window" class="calc-window">
+  <div class="calc-titlebar" id="calc-titlebar">
+    <span>Calculator</span>
+    <button class="calc-close" id="calc-close">&times;</button>
+  </div>
+  <input type="text" id="calc-display" readonly value="0">
+  <div class="calc-grid" id="calc-grid"></div>
+</div>
+
+<!-- ============ SETTINGS MODAL ============ -->
+<div id="modal-settings" class="modal-overlay">
+  <div class="modal-box modal-wide">
+    <button class="modal-close" data-close="modal-settings">&times;</button>
+    <h3>Settings</h3>
+
+    <div class="settings-section">
+      <h4>Your name</h4>
+      <div class="field-row">
+        <input type="text" id="settings-name" maxlength="40">
+        <button class="btn btn-secondary" id="settings-save-name">Save</button>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h4>Sound effects</h4>
+      <p class="settings-hint">Drop your own audio files into the <code>/songs</code> folder as
+      <code>song1.mp3</code> … <code>song6.mp3</code>. Correct answers randomly play song 1, 5 or 6.
+      Wrong answers randomly play song 2 or 3. Song 4 is reserved — play it yourself for a "test submitted" cue if you like.</p>
+      <label class="switch-row"><input type="checkbox" id="settings-sound-toggle" checked> Enable sound effects</label>
+    </div>
+
+    <div class="settings-section">
+      <h4>Fix a question image</h4>
+      <p class="settings-hint">If a question image looks cropped wrong or unclear, find it below and either
+      trim it directly, or upload your own replacement photo/screenshot of that question.</p>
+      <div class="field-row">
+        <select id="fix-chapter"></select>
+        <select id="fix-attempt">
+          <option value="jan">Jan</option>
+          <option value="april">April</option>
+        </select>
+        <select id="fix-qnum"></select>
+        <button class="btn btn-secondary" id="fix-load">Load</button>
+      </div>
+      <div id="fix-editor" class="fix-editor" style="display:none">
+        <div class="fix-canvas-wrap">
+          <canvas id="fix-canvas"></canvas>
+        </div>
+        <p class="settings-hint">Drag on the image to select a tighter crop, then click "Use selection". Or upload a replacement image entirely.</p>
+        <div class="fix-actions">
+          <button class="btn btn-secondary" id="fix-use-selection">Use Selection as Crop</button>
+          <label class="btn btn-secondary file-btn">Upload Replacement
+            <input type="file" id="fix-upload" accept="image/*" style="display:none">
+          </label>
+          <button class="btn btn-ghost" id="fix-reset">Reset to Original</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h4>Progress data</h4>
+      <button class="btn btn-ghost" id="settings-clear-progress">Clear all progress &amp; scores</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ AI TOAST ============ -->
+<div id="ai-toast" class="ai-toast"></div>
+
+<!-- ============ STREAK POPUP ============ -->
+<div id="streak-popup" class="streak-popup">
+  <div class="streak-emoji">🔥</div>
+  <div class="streak-popup-text">3 in a row!</div>
+  <div class="streak-sub">Keep it going</div>
+</div>
+
+<!-- audio elements -->
+<audio id="audio-1" src="songs/song1.mp3" preload="none"></audio>
+<audio id="audio-2" src="songs/song2.mp3" preload="none"></audio>
+<audio id="audio-3" src="songs/song3.mp3" preload="none"></audio>
+<audio id="audio-4" src="songs/song4.mp3" preload="none"></audio>
+<audio id="audio-5" src="songs/song5.mp3" preload="none"></audio>
+<audio id="audio-6" src="songs/song6.mp3" preload="none"></audio>
+
+<script src="js/calculator.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

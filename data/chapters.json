@@ -1,0 +1,242 @@
+[
+ {
+  "idx": 1,
+  "name": "Units, Dimensions, Errors & Vectors",
+  "slug": "units-dimensions-errors-vectors",
+  "jan": 15,
+  "april": 15,
+  "total": 30,
+  "youtubeJan": "https://www.youtube.com/live/KS_eBCyjcyI?si=QKuCFz8Ri0sKkZaJ",
+  "youtubeApril": "https://youtu.be/v_IMschtOUA"
+ },
+ {
+  "idx": 2,
+  "name": "Kinematics",
+  "slug": "kinematics",
+  "jan": 8,
+  "april": 11,
+  "total": 19,
+  "youtubeJan": "https://www.youtube.com/live/-P_6eEOzDwQ?si=mpb-P0xJQPPzLXHi",
+  "youtubeApril": "https://youtu.be/1EmoIPUU4rQ"
+ },
+ {
+  "idx": 3,
+  "name": "Laws of Motion",
+  "slug": "laws-of-motion",
+  "jan": 8,
+  "april": 10,
+  "total": 18,
+  "youtubeJan": "https://www.youtube.com/live/-P_6eEOzDwQ?si=mpb-P0xJQPPzLXHi",
+  "youtubeApril": "https://youtu.be/jluinB0OGUs"
+ },
+ {
+  "idx": 4,
+  "name": "Work, Energy & Power",
+  "slug": "work-energy-power",
+  "jan": 5,
+  "april": 7,
+  "total": 12,
+  "youtubeJan": "https://www.youtube.com/live/-P_6eEOzDwQ?si=mpb-P0xJQPPzLXHi",
+  "youtubeApril": "https://youtu.be/p1pBlQZGlk4"
+ },
+ {
+  "idx": 5,
+  "name": "COM & Collision",
+  "slug": "com-collision",
+  "jan": 3,
+  "april": 3,
+  "total": 6,
+  "youtubeJan": "https://www.youtube.com/live/D1wofc2RS3I?si=tEbY2R5FBc1NtPmA",
+  "youtubeApril": "https://youtu.be/p1pBlQZGlk4"
+ },
+ {
+  "idx": 6,
+  "name": "Rotational Motion",
+  "slug": "rotational-motion",
+  "jan": 18,
+  "april": 7,
+  "total": 25,
+  "youtubeJan": "https://www.youtube.com/live/PpLci4MYylM?si=ps2mInihlvh9bIii",
+  "youtubeApril": "https://youtu.be/ARTuAIfPMGc"
+ },
+ {
+  "idx": 7,
+  "name": "Gravitation",
+  "slug": "gravitation",
+  "jan": 5,
+  "april": 5,
+  "total": 10,
+  "youtubeJan": "https://www.youtube.com/live/D1wofc2RS3I?si=tEbY2R5FBc1NtPmA",
+  "youtubeApril": "https://youtu.be/ARTuAIfPMGc"
+ },
+ {
+  "idx": 8,
+  "name": "Properties of Solids",
+  "slug": "properties-of-solids",
+  "jan": 2,
+  "april": 11,
+  "total": 13,
+  "youtubeJan": "https://www.youtube.com/live/D1wofc2RS3I?si=tEbY2R5FBc1NtPmA",
+  "youtubeApril": "https://youtu.be/3Yhwn74oEP8"
+ },
+ {
+  "idx": 9,
+  "name": "Fluid Mechanics",
+  "slug": "fluid-mechanics",
+  "jan": 10,
+  "april": 10,
+  "total": 20,
+  "youtubeJan": "https://www.youtube.com/live/D1wofc2RS3I?si=tEbY2R5FBc1NtPmA",
+  "youtubeApril": "https://youtu.be/BxeYUcZyJMY"
+ },
+ {
+  "idx": 10,
+  "name": "SHM",
+  "slug": "shm",
+  "jan": 8,
+  "april": 7,
+  "total": 15,
+  "youtubeJan": "https://www.youtube.com/live/KS_eBCyjcyI?si=QKuCFz8Ri0sKkZaJ",
+  "youtubeApril": "https://youtu.be/msMNNH2DMvE"
+ },
+ {
+  "idx": 11,
+  "name": "Thermal Properties & Heat Transfer",
+  "slug": "thermal-properties-heat-transfer",
+  "jan": 7,
+  "april": 3,
+  "total": 10,
+  "youtubeJan": "https://www.youtube.com/live/kT_w3beSoso?si=ytJ6zUaTNcsACd-V",
+  "youtubeApril": "https://youtu.be/msMNNH2DMvE"
+ },
+ {
+  "idx": 12,
+  "name": "Thermodynamics & KTG",
+  "slug": "thermodynamics-ktg",
+  "jan": 16,
+  "april": 15,
+  "total": 31,
+  "youtubeJan": "https://www.youtube.com/live/kT_w3beSoso?si=ytJ6zUaTNcsACd-V",
+  "youtubeApril": "https://youtu.be/qEF8xo0J-wI"
+ },
+ {
+  "idx": 13,
+  "name": "Wave Motion",
+  "slug": "wave-motion",
+  "jan": 7,
+  "april": 2,
+  "total": 9,
+  "youtubeJan": "https://www.youtube.com/live/KS_eBCyjcyI?si=QKuCFz8Ri0sKkZaJ",
+  "youtubeApril": "https://youtu.be/msMNNH2DMvE"
+ },
+ {
+  "idx": 14,
+  "name": "Electrostatics",
+  "slug": "electrostatics",
+  "jan": 16,
+  "april": 9,
+  "total": 25,
+  "youtubeJan": "https://www.youtube.com/live/kLTFozmnRwo?si=ctJX6GJmHqQb1i_a",
+  "youtubeApril": "https://youtu.be/XY9Mx6qzlGs"
+ },
+ {
+  "idx": 15,
+  "name": "Capacitors",
+  "slug": "capacitors",
+  "jan": 7,
+  "april": 8,
+  "total": 15,
+  "youtubeJan": "https://www.youtube.com/live/kLTFozmnRwo?si=ctJX6GJmHqQb1i_a",
+  "youtubeApril": "https://youtu.be/7NV70vO94dA"
+ },
+ {
+  "idx": 16,
+  "name": "Current Electricity",
+  "slug": "current-electricity",
+  "jan": 19,
+  "april": 9,
+  "total": 28,
+  "youtubeJan": "https://www.youtube.com/live/luku0R4mD5o?si=ROr80Vly_0mLBz95",
+  "youtubeApril": "https://youtu.be/7NV70vO94dA"
+ },
+ {
+  "idx": 17,
+  "name": "Moving Charges & MEC",
+  "slug": "moving-charges-mec",
+  "jan": 9,
+  "april": 14,
+  "total": 23,
+  "youtubeJan": "https://www.youtube.com/live/-nziUCMWzUw?si=jtJjopO6PclvEVtR",
+  "youtubeApril": "https://youtu.be/zurYnE1oje0"
+ },
+ {
+  "idx": 18,
+  "name": "EMI",
+  "slug": "emi",
+  "jan": 11,
+  "april": 8,
+  "total": 19,
+  "youtubeJan": "https://www.youtube.com/live/-nziUCMWzUw?si=jtJjopO6PclvEVtR",
+  "youtubeApril": "https://youtu.be/xfA-0wdEOgM"
+ },
+ {
+  "idx": 19,
+  "name": "AC",
+  "slug": "ac",
+  "jan": 5,
+  "april": 5,
+  "total": 10,
+  "youtubeJan": "https://www.youtube.com/live/-nziUCMWzUw?si=jtJjopO6PclvEVtR",
+  "youtubeApril": "https://youtu.be/xfA-0wdEOgM"
+ },
+ {
+  "idx": 20,
+  "name": "Wave Optics",
+  "slug": "wave-optics",
+  "jan": 10,
+  "april": 11,
+  "total": 21,
+  "youtubeJan": "https://www.youtube.com/live/SlH7himP4Ts?si=KpPU9RGFrv9eqDaa",
+  "youtubeApril": "https://youtu.be/nR9hgZf4YqI"
+ },
+ {
+  "idx": 21,
+  "name": "EM Waves",
+  "slug": "em-waves",
+  "jan": 11,
+  "april": 8,
+  "total": 19,
+  "youtubeJan": "https://www.youtube.com/live/SlH7himP4Ts?si=KpPU9RGFrv9eqDaa",
+  "youtubeApril": "https://youtu.be/nR9hgZf4YqI"
+ },
+ {
+  "idx": 22,
+  "name": "Ray Optics",
+  "slug": "ray-optics",
+  "jan": 20,
+  "april": 17,
+  "total": 37,
+  "youtubeJan": "https://www.youtube.com/live/UZQBHNUPJwc?si=7aLChJGIqQaYGVLl",
+  "youtubeApril": "https://youtu.be/t_5zuIhEUwk"
+ },
+ {
+  "idx": 23,
+  "name": "Semiconductors",
+  "slug": "semiconductors",
+  "jan": 10,
+  "april": 11,
+  "total": 21,
+  "youtubeJan": "https://www.youtube.com/live/UZQBHNUPJwc?si=7aLChJGIqQaYGVLl",
+  "youtubeApril": "https://youtu.be/sNTMEEnkFuk"
+ },
+ {
+  "idx": 24,
+  "name": "Modern Physics",
+  "slug": "modern-physics",
+  "jan": 20,
+  "april": 19,
+  "total": 39,
+  "youtubeJan": "https://www.youtube.com/live/jcFJsyEyasg?si=0CdSMSmziQ4Rsf0k",
+  "youtubeApril": "https://youtu.be/uxb_qhCWoiQ"
+ }
+]
