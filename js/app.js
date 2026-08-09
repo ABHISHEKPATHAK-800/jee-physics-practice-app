@@ -72,6 +72,12 @@ function showScreen(id){
   $('#'+id).classList.add('active');
 }
 
+function enterExamFullscreen(){
+  if (!document.fullscreenElement && document.documentElement.requestFullscreen){
+    document.documentElement.requestFullscreen().catch(()=>{});
+  }
+}
+
 /* ===================== LOAD DATA ===================== */
 async function loadData(){
   try{
@@ -191,6 +197,7 @@ function initModeModal(){
 
 /* ===================== EXAM SESSION ===================== */
 function startExam(chapter, attemptFilter, mode){
+  enterExamFullscreen();
   let qs = MANIFEST.filter(q=> q.chapter_slug === chapter.slug &&
     (attemptFilter === 'both' || q.attempt === attemptFilter));
   qs = qs.slice().sort((a,b)=> a.attempt===b.attempt ? a.num-b.num : (a.attempt==='jan'?-1:1));
