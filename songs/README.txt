@@ -1,10 +1,13 @@
 DROP YOUR AUDIO FILES HERE
 ===========================
 
-Add exactly these six files to this folder:
+Current sound assignments:
 
-  song1.mp3
-  song2.mp3
+  song1.mp3  Money follows my brother
+  song2.mp3  Khel Khatam Beta
+
+You can also add these optional files:
+
   song3.mp3
   song4.mp3
   song5.mp3
