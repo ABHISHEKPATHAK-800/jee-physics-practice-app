@@ -724,6 +724,18 @@ function toast(msg){
 
 /* ===================== SETTINGS ===================== */
 function initSettings(){
+  function refreshThemeSettings(){
+    const selected = localStorage.getItem(LS.theme) || 'system';
+    $all('[data-settings-theme]').forEach(b=>b.classList.toggle('active', b.dataset.settingsTheme === selected));
+  }
+  refreshThemeSettings();
+  $all('[data-settings-theme]').forEach(button=>button.addEventListener('click', ()=>{
+    const theme = button.dataset.settingsTheme;
+    localStorage.setItem(LS.theme, theme);
+    applyTheme(theme);
+    refreshThemeSettings();
+    toast('Theme updated.');
+  }));
   $('#settings-name').value = localStorage.getItem(LS.name) || '';
   $('#settings-save-name').addEventListener('click', ()=>{
     const v = $('#settings-name').value.trim() || 'Aspirant';
