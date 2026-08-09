@@ -57,6 +57,7 @@ function soundEnabled(){
 }
 function setSoundEnabled(v){
   localStorage.setItem(LS.sound, v ? '1' : '0');
+  if (!v) stopFeedbackSounds();
   updateSoundIcon();
   const cb = $('#settings-sound-toggle');
   if (cb) cb.checked = v;
@@ -282,6 +283,7 @@ function currentQ(){ return session.questions[session.idx]; }
 function currentA(){ return session.answers[session.idx]; }
 
 function renderQuestion(i){
+  stopFeedbackSounds();
   // save nothing here (explicit Save & Next handles persistence); just mark visited
   session.idx = i;
   const q = currentQ();
@@ -378,7 +380,34 @@ function evaluate(q, a){
   return null;
 }
 
-function playFeedbackSound(result){
+const audioStartOffsets = new Map();
+let audioAnalysisContext = null;
+
+function stopFeedbackSounds(){
+  $all('audio[id^="audio-"]').forEach(el=>{
+    el.pause();
+    el.currentTime = 0;
+  });
+}
+
+async function firstAudibleSecond(el){
+  if (audioStartOffsets.has(el.src)) return audioStartOffsets.get(el.src);
+  try{
+    audioAnalysisContext ||= new (window.AudioContext || window.webkitAudioContext)();
+    const buffer = await fetch(el.src).then(r=>r.arrayBuffer()).then(b=>audioAnalysisContext.decodeAudioData(b));
+    const samples = buffer.getChannelData(0), step = Math.max(1, Math.floor(buffer.sampleRate * 0.02));
+    let start = 0;
+    for (let i=0; i<samples.length; i+=step){
+      let peak = 0;
+      for (let j=i; j<Math.min(i+step, samples.length); j++) peak = Math.max(peak, Math.abs(samples[j]));
+      if (peak > 0.018){ start = Math.max(0, i / buffer.sampleRate - 0.02); break; }
+    }
+    audioStartOffsets.set(el.src, start);
+    return start;
+  }catch(e){ return 0; }
+}
+
+async function playFeedbackSound(result){
   if (!soundEnabled()) return;
   let pool;
   if (result === 'correct') pool = [1,5,6];
@@ -386,7 +415,11 @@ function playFeedbackSound(result){
   else return;
   const n = pool[Math.floor(Math.random()*pool.length)];
   const el = $('#audio-'+n);
-  if (el){ el.currentTime = 0; el.play().catch(()=>{}); }
+  if (el){
+    stopFeedbackSounds();
+    el.currentTime = await firstAudibleSecond(el);
+    if (soundEnabled()) el.play().catch(()=>{});
+  }
 }
 
 function hasAnyAnswer(a){
