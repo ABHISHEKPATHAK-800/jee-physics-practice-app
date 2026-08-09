@@ -13,7 +13,8 @@ const LS = {
   name: 'jee_name',
   overrides: 'jee_overrides',
   progress: 'jee_progress',
-  sound: 'jee_sound_enabled'
+  sound: 'jee_sound_enabled',
+  theme: 'jee_theme'
 };
 
 /* ===================== UTIL ===================== */
@@ -76,6 +77,25 @@ function enterExamFullscreen(){
   if (!document.fullscreenElement && document.documentElement.requestFullscreen){
     document.documentElement.requestFullscreen().catch(()=>{});
   }
+}
+
+function applyTheme(theme){
+  const resolved = theme === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+  document.documentElement.dataset.theme = resolved;
+}
+function initThemeChooser(){
+  const saved = localStorage.getItem(LS.theme);
+  if (saved) applyTheme(saved);
+  else $('#modal-theme').classList.add('active');
+  $all('[data-theme]').forEach(button=>button.addEventListener('click', ()=>{
+    const theme = button.dataset.theme;
+    localStorage.setItem(LS.theme, theme);
+    applyTheme(theme);
+    $('#modal-theme').classList.remove('active');
+  }));
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ()=>{
+    if (localStorage.getItem(LS.theme) === 'system') applyTheme('system');
+  });
 }
 
 /* ===================== LOAD DATA ===================== */
@@ -822,6 +842,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   const ok = await loadData();
   if (!ok) return;
   initWelcome();
+  initThemeChooser();
   initModeModal();
   initExamControls();
   initAskAI();
