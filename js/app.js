@@ -183,10 +183,12 @@ function initModeModal(){
     });
   });
   $('#pick-test').addEventListener('click', ()=>{
+    enterExamFullscreen();
     $('#modal-mode').classList.remove('active');
     startExam(pendingChapter, pendingAttempt, 'test');
   });
   $('#pick-quiz').addEventListener('click', ()=>{
+    enterExamFullscreen();
     $('#modal-mode').classList.remove('active');
     startExam(pendingChapter, pendingAttempt, 'quiz');
   });
@@ -197,7 +199,6 @@ function initModeModal(){
 
 /* ===================== EXAM SESSION ===================== */
 function startExam(chapter, attemptFilter, mode){
-  enterExamFullscreen();
   let qs = MANIFEST.filter(q=> q.chapter_slug === chapter.slug &&
     (attemptFilter === 'both' || q.attempt === attemptFilter));
   qs = qs.slice().sort((a,b)=> a.attempt===b.attempt ? a.num-b.num : (a.attempt==='jan'?-1:1));
