@@ -26,7 +26,7 @@
 [data-theme="dark"] .chapter-card{background:rgba(22,35,46,.94);}
 [data-theme="dark"] .topbar{background:#0b2638;}
 *{box-sizing:border-box;}
-html,body{margin:0;padding:0;height:100%;background:var(--grey-bg);color:var(--text);overflow:hidden;}
+html,body{margin:0;padding:0;height:100%;background:var(--grey-bg);color:var(--text);}
 button{font-family:inherit;cursor:pointer;}
 input{font-family:inherit;}
 
