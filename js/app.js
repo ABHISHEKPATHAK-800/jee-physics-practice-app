@@ -13,8 +13,7 @@ const LS = {
   name: 'jee_name',
   overrides: 'jee_overrides',
   progress: 'jee_progress',
-  sound: 'jee_sound_enabled',
-  theme: 'jee_theme'
+  sound: 'jee_sound_enabled'
 };
 
 /* ===================== UTIL ===================== */
@@ -79,24 +78,6 @@ function enterExamFullscreen(){
   }
 }
 
-function applyTheme(theme){
-  const resolved = theme === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
-  document.documentElement.dataset.theme = resolved;
-}
-function initThemeChooser(){
-  const saved = localStorage.getItem(LS.theme);
-  if (saved) applyTheme(saved);
-  else $('#modal-theme').classList.add('active');
-  $all('[data-theme]').forEach(button=>button.addEventListener('click', ()=>{
-    const theme = button.dataset.theme;
-    localStorage.setItem(LS.theme, theme);
-    applyTheme(theme);
-    $('#modal-theme').classList.remove('active');
-  }));
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ()=>{
-    if (localStorage.getItem(LS.theme) === 'system') applyTheme('system');
-  });
-}
 
 /* ===================== LOAD DATA ===================== */
 async function loadData(){
@@ -724,18 +705,6 @@ function toast(msg){
 
 /* ===================== SETTINGS ===================== */
 function initSettings(){
-  function refreshThemeSettings(){
-    const selected = localStorage.getItem(LS.theme) || 'system';
-    $all('[data-settings-theme]').forEach(b=>b.classList.toggle('active', b.dataset.settingsTheme === selected));
-  }
-  refreshThemeSettings();
-  $all('[data-settings-theme]').forEach(button=>button.addEventListener('click', ()=>{
-    const theme = button.dataset.settingsTheme;
-    localStorage.setItem(LS.theme, theme);
-    applyTheme(theme);
-    refreshThemeSettings();
-    toast('Theme updated.');
-  }));
   $('#settings-name').value = localStorage.getItem(LS.name) || '';
   $('#settings-save-name').addEventListener('click', ()=>{
     const v = $('#settings-name').value.trim() || 'Aspirant';
@@ -854,7 +823,6 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   const ok = await loadData();
   if (!ok) return;
   initWelcome();
-  initThemeChooser();
   initModeModal();
   initExamControls();
   initAskAI();
